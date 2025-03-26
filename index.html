@@ -10,47 +10,49 @@
 			sizes="32x32"
 			href="./assets/images/favicon-32x32.png"
 		/>
-
 		<title>Frontend Mentor | Multi-step form</title>
 	</head>
 	<body>
 		<main class="container">
 			<div class="form-steps-box">
-				<div class="steps">
-					<div class="step">
+				<ul class="steps">
+					<li class="step step--active">
 						<span class="step-number">1</span>
 						<div class="step-text">
 							<p class="step-subheading">Step 1</p>
 							<p class="step-heading">Your info</p>
 						</div>
-					</div>
-					<div class="step">
+					</li>
+					<li class="step">
 						<span class="step-number">2</span>
 						<div class="step-text">
 							<p class="step-subheading">Step 2</p>
 							<p class="step-heading">Select plan</p>
 						</div>
-					</div>
-					<div class="step">
+					</li>
+					<li class="step">
 						<span class="step-number">3</span>
-						<p class="step-subheading">Step 3</p>
-						<p class="step-heading">Add-ons</p>
-					</div>
-					<div class="step">
+						<div class="step-text">
+							<p class="step-subheading">Step 3</p>
+							<p class="step-heading">Add-ons</p>
+						</div>
+					</li>
+					<li class="step">
 						<span class="step-number">4</span>
-						<p class="step-subheading">Step 4</p>
-						<p class="step-heading">Summary</p>
-					</div>
-				</div>
+						<div class="step-text">
+							<p class="step-subheading">Step 4</p>
+							<p class="step-heading">Summary</p>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<div class="form-content-box">
-				<form>
-					<div class="form-content step--one">
+			<form>
+				<div class="form-content-box">
+					<section class="form-content step--one">
 						<div class="step-content-header">
 							<h2 class="step-content-heading">Personal info</h2>
 							<p class="step-content-description">
-								Personal info Please provide your name, email address, and phone
-								number.
+								Please provide your name, email address, and phone number.
 							</p>
 						</div>
 						<div class="step-content-body">
@@ -61,6 +63,7 @@
 									id="name"
 									placeholder="e.g. Stephen King"
 									required
+									autocomplete="off"
 								/>
 							</div>
 							<div class="content-controls">
@@ -70,6 +73,7 @@
 									id="email"
 									placeholder="e.g. stephenking@lorem.com"
 									required
+									autocomplete="off"
 								/>
 							</div>
 							<div class="content-controls">
@@ -79,12 +83,13 @@
 									id="phone"
 									placeholder="e.g. +1 234 567 890"
 									required
+									autocomplete="off"
 								/>
 							</div>
 						</div>
-					</div>
+					</section>
 
-					<div class="form-content step--two hidden">
+					<section class="form-content step--two hidden">
 						<div class="step-content-header">
 							<h2 class="step-content-heading">Select your plan</h2>
 							<p class="step-content-description">
@@ -92,42 +97,54 @@
 							</p>
 						</div>
 						<div class="step-content-body">
-							<div class="content-controls">
-								<img src="assets/images/icon-arcade.svg" alt="arcade-plan" />
+							<div class="content-controls active">
+								<img
+									src="assets/images/icon-arcade.svg"
+									alt="arcade-plan"
+									class="plan-icon"
+								/>
 								<div class="plan-description">
 									<p class="plan-name">Arcade</p>
 									<p class="plan-price">$9/mo</p>
-									<p class="plan-discount">2 months free</p>
+									<p class="plan-discount hidden">2 months free</p>
 								</div>
 							</div>
 							<div class="content-controls">
 								<img
 									src="assets/images/icon-advanced.svg"
 									alt="advanced-plan"
+									class="plan-icon"
 								/>
 								<div class="plan-description">
 									<p class="plan-name">Advanced</p>
 									<p class="plan-price">$12/mo</p>
-									<p class="plan-discount">2 months free</p>
+									<p class="plan-discount hidden">2 months free</p>
 								</div>
 							</div>
 							<div class="content-controls">
-								<img src="assets/images/icon-pro.svg" alt="pro-plan" />
+								<img
+									src="assets/images/icon-pro.svg"
+									alt="pro-plan"
+									class="plan-icon"
+								/>
 								<div class="plan-description">
 									<p class="plan-name">Pro</p>
 									<p class="plan-price">$15/mo</p>
-									<p class="plan-discount">2 months free</p>
+									<p class="plan-discount hidden">2 months free</p>
 								</div>
 							</div>
 						</div>
 						<div class="step-content-subscriptions">
 							<p class="subscription--monthly">Monthly</p>
-							<span class="subscription-btn"></span>
+							<label class="plan-switch" for="plan">
+								<input id="plan" type="checkbox" />
+								<span></span>
+							</label>
 							<p class="subscription--yearly">Yearly</p>
 						</div>
-					</div>
+					</section>
 
-					<div class="form-content step--three hidden">
+					<section class="form-content step--three hidden">
 						<div class="step-content-header">
 							<h2 class="step-content-heading">Pick add-ons</h2>
 							<p class="step-content-description">
@@ -172,9 +189,9 @@
 								</label>
 							</div>
 						</div>
-					</div>
+					</section>
 
-					<div class="form-content step--four hidden">
+					<section class="form-content step--four hidden">
 						<div class="step-content-header">
 							<h2 class="step-content-heading">Finishing up</h2>
 							<p class="step-content-description">
@@ -210,9 +227,9 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 
-					<div class="form-content step--five hidden">
+					<section class="form-content step--five hidden">
 						<div class="step-content-header">
 							<img src="assets/images/icon-thank-you.svg" alt="thank-you" />
 							<h2 class="step-content-heading">Thank you!</h2>
@@ -224,14 +241,13 @@
 								to email us at support@loremgaming.com.
 							</p>
 						</div>
-					</div>
-
-					<div class="form-buttons-box">
-						<button class="btn btn--prev" type="button">Go Back</button>
-						<button class="btn btn--next" type="button">Next Step</button>
-					</div>
-				</form>
-			</div>
+					</section>
+				</div>
+				<div class="form-buttons-box">
+					<button class="btn btn--prev" type="button">Go Back</button>
+					<button class="btn btn--next" type="button">Next Step</button>
+				</div>
+			</form>
 		</main>
 	</body>
 </html>
