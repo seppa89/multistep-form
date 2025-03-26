@@ -31,7 +31,7 @@
 }
 
 /******************/
-/* GENERAT STYLES */
+/* GENERAL STYLES */
 /*****************/
 
 * {
@@ -374,6 +374,99 @@ label.plan-switch {
 }
 
 /********************/
+/* FINISHING UP STEP */
+/********************/
+
+.summary {
+	padding: 0.5rem 1.6rem 1.8rem 1.6rem;
+	background-color: var(--alabaster);
+	color: var(--cool-gray);
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+.summary-plan {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1.5rem;
+}
+
+.summary-description {
+	display: flex;
+	flex-direction: column;
+}
+
+.summary-name {
+	font-size: 1.4rem;
+}
+
+.summary-price {
+	color: var(--primary-blue);
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.plan-change-btn {
+	display: none;
+	background-color: transparent;
+	border: 0 solid;
+	margin-right: auto;
+	text-decoration: underline;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1.4rem;
+	letter-spacing: 0.2px;
+	text-decoration-thickness: 2px;
+}
+
+.summary-total {
+	display: flex;
+	justify-content: space-between;
+	color: var(--cool-gray);
+	padding: 1.4rem 1.7rem 0 1.6rem;
+}
+
+.summary-total p {
+	font-size: 1.4rem;
+	font-weight: 500;
+	letter-spacing: -0.1px;
+}
+
+.summary-total p:nth-child(2) {
+	color: var(--purplish-blue);
+	font-weight: 700;
+	font-size: 1.6rem;
+	letter-spacing: 0.1px;
+}
+
+.summary-plan.active {
+	border-bottom: 1px solid var(--light-gray);
+	padding: 1.3rem 0;
+	padding-top: 1.3rem;
+	font-weight: 700;
+	color: var(--primary-blue);
+	line-height: 1.5;
+}
+
+.summary-plan.active .summary-price {
+	font-weight: 700;
+}
+
+.summary-plan.active .plan-change-btn {
+	display: block;
+	color: var(--cool-gray);
+}
+
+.summary-plan.active .summary-name {
+	letter-spacing: -0.1px;
+}
+
+.summary-plan.active .summary-price {
+	margin-top: 0.9rem;
+}
+
+/********************/
 /* FORM BUTTONS */
 /********************/
 
@@ -398,6 +491,10 @@ label.plan-switch {
 .btn--next {
 	background-color: var(--primary-blue);
 	color: var(--magnolia);
+}
+
+.btn--next[type='submit'] {
+	background-color: var(--purplish-blue);
 }
 
 .btn--prev {
