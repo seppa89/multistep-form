@@ -32,7 +32,7 @@
 
 /******************/
 /* GENERAL STYLES */
-/*****************/
+/******************/
 
 * {
 	margin: 0;
@@ -87,9 +87,9 @@ section.hidden,
 	background-color: var(--alabaster);
 }
 
-/******************/
+/*******************/
 /* FORM STEPS LIST */
-/*****************/
+/*******************/
 
 .form-steps-box {
 	background: url('/assets/images/bg-sidebar-mobile.svg');
@@ -140,9 +140,9 @@ section.hidden,
 	color: var(--primary-blue);
 }
 
-/********************/
+/****************/
 /* FORM CONTENT */
-/********************/
+/****************/
 
 form {
 	flex: 1;
@@ -320,9 +320,9 @@ label.plan-switch {
 	background-color: var(--white);
 }
 
-/********************/
+/****************/
 /* ADD ONS STEP */
-/********************/
+/****************/
 
 .step--three .content-controls {
 	border: 1px solid var(--light-gray);
@@ -373,9 +373,9 @@ label.plan-switch {
 	letter-spacing: -0.4px;
 }
 
-/********************/
+/*********************/
 /* FINISHING UP STEP */
-/********************/
+/*********************/
 
 .summary {
 	padding: 0.5rem 1.6rem 1.8rem 1.6rem;
@@ -466,9 +466,38 @@ label.plan-switch {
 	margin-top: 0.9rem;
 }
 
-/********************/
+/*********************/
+/* THANK YOU SECTION */
+/*********************/
+
+.step--five {
+	text-align: center;
+}
+
+.step--five.form-content {
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	gap: 1rem;
+}
+
+.step--five .step-content-header {
+	gap: 2.3rem;
+}
+
+.step--five img {
+	width: 5.6rem;
+	rotate: 1;
+	margin: 0 auto;
+}
+
+.finish-text {
+	line-height: 156.2%;
+	color: var(--cool-gray);
+}
+
+/****************/
 /* FORM BUTTONS */
-/********************/
+/****************/
 
 .form-buttons-box {
 	display: flex;
