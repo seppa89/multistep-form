@@ -52,6 +52,7 @@ html {
 body {
 	min-height: 100dvh;
 	font-family: 'Ubuntu';
+	background-color: var(--magnolia);
 }
 
 ul {
@@ -70,7 +71,6 @@ section.hidden,
 }
 
 .container {
-	background-color: var(--magnolia);
 	display: flex;
 	flex-direction: column;
 	min-height: 100dvh;
@@ -108,23 +108,18 @@ section.hidden,
 	gap: 1.6rem;
 }
 
-.step {
+.step-number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 3.3rem;
 	aspect-ratio: 1;
-	border: 1px solid var(--light-blue);
 	border-radius: 50%;
-	display: flex;
-}
-
-.step-number {
+	border: 1px solid var(--light-blue);
 	font-weight: 700;
 	font-size: 1.4rem;
 	line-height: 3.1rem;
 	color: var(--magnolia);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 1;
 }
 
 .step-text {
@@ -132,11 +127,8 @@ section.hidden,
 	visibility: hidden;
 }
 
-.step--active {
-	background-color: var(--light-blue);
-}
-
 .step--active .step-number {
+	background-color: var(--light-blue);
 	color: var(--primary-blue);
 }
 
@@ -205,9 +197,8 @@ form {
 }
 
 .step--one input {
-	height: 4rem;
 	font-size: 1.6rem;
-	padding: 0 1.5rem;
+	padding: 1rem 1.5rem;
 	border: 1px solid var(--light-gray);
 	border-radius: 0.4rem;
 	font-family: inherit;
@@ -530,4 +521,131 @@ label.plan-switch {
 	color: var(--cool-gray);
 	background-color: var(--white);
 	padding-left: 0;
+}
+
+/* min-width 944px */
+
+@media (min-width: 59em) {
+	body {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		width: 94rem;
+		flex-direction: row;
+		min-height: unset;
+		height: 60rem;
+		padding: 1.6rem;
+		border-radius: 10px;
+		background-color: var(--white);
+		gap: 1.6rem;
+	}
+
+	.form-steps-box {
+		background: url('/assets/images/bg-sidebar-desktop.svg');
+		width: 27.4rem;
+		height: 56.8rem;
+		justify-content: flex-start;
+		padding: 4rem 3.2rem;
+	}
+
+	.steps {
+		display: flex;
+		flex-direction: column;
+		margin-inline: unset;
+		gap: 3.2rem;
+	}
+
+	.steps li {
+		display: flex;
+		gap: 1.6rem;
+	}
+
+	.step-text {
+		display: flex;
+		gap: 0.5rem;
+		flex-direction: column;
+		text-transform: uppercase;
+		visibility: visible;
+	}
+
+	.step-subheading {
+		color: var(--pastel-blue);
+		font-size: 1.3rem;
+		letter-spacing: -0.5px;
+		line-height: 1;
+	}
+
+	.step-heading {
+		line-height: 1;
+		font-size: 1.4rem;
+		font-weight: 500;
+		color: var(--magnolia);
+		letter-spacing: 1.4px;
+	}
+
+	.form-content-box {
+		padding: 0 6rem;
+	}
+
+	.form-content {
+		top: 0;
+		padding: 4.4rem 2.4rem;
+		gap: 3.8rem;
+	}
+
+	.step-content-header {
+		gap: 1.3rem;
+		letter-spacing: -1px;
+	}
+
+	.step-content-heading {
+		font-size: 3.2rem;
+		letter-spacing: 0.1px;
+	}
+
+	.step-content-description {
+		letter-spacing: -0.94px;
+	}
+
+	.step--one .step-content {
+		gap: 2.4rem;
+	}
+
+	.step--one .step-content-body {
+		gap: 2.4rem;
+	}
+
+	.step--one .content-controls {
+		gap: 0.8rem;
+	}
+
+	.step--one label {
+		font-size: 1.4rem;
+		letter-spacing: 0;
+	}
+
+	.step--one input {
+		padding: 1.4rem 1.5rem;
+		border-radius: 0.8rem;
+	}
+
+	.step--one input::placeholder {
+		font-weight: 500;
+	}
+
+	.form-buttons-box {
+		padding: 1.6rem 8.4rem;
+	}
+
+	.btn {
+		padding: 1.5rem 2.4rem;
+		border-radius: 0.8rem;
+		font-size: 1.6rem;
+		letter-spacing: 0.1px;
+		line-height: 1.1;
+	}
 }
