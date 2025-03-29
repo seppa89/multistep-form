@@ -98,7 +98,8 @@
 							</p>
 						</div>
 						<div class="step-content-body">
-							<div class="content-controls active">
+							<div class="content-controls">
+								<label for="arcade" id="plan--arcade" class="plan-type">
 								<img
 									src="assets/images/icon-arcade.svg"
 									alt="arcade-plan"
@@ -106,11 +107,15 @@
 								/>
 								<div class="plan-description">
 									<p class="plan-name">Arcade</p>
-									<p class="plan-price">$9/mo</p>
-									<p class="plan-discount hidden">2 months free</p>
+										<p class="plan-price plan-price--month">$9/mo</p>
+										<p class="plan-price plan-price--year">$90/yr</p>
+										<p class="plan-discount">2 months free</p>
 								</div>
+									<input type="checkbox" id="arcade" />
+								</label>
 							</div>
 							<div class="content-controls">
+								<label for="advanced" id="plan--advanced" class="plan-type">
 								<img
 									src="assets/images/icon-advanced.svg"
 									alt="advanced-plan"
@@ -118,11 +123,15 @@
 								/>
 								<div class="plan-description">
 									<p class="plan-name">Advanced</p>
-									<p class="plan-price">$12/mo</p>
-									<p class="plan-discount hidden">2 months free</p>
+										<p class="plan-price plan-price--month">$12/mo</p>
+										<p class="plan-price plan-price--year">$120/yr</p>
+										<p class="plan-discount">2 months free</p>
 								</div>
+									<input type="checkbox" id="advanced" />
+								</label>
 							</div>
 							<div class="content-controls">
+								<label for="pro" id="plan--pro" class="plan-type">
 								<img
 									src="assets/images/icon-pro.svg"
 									alt="pro-plan"
@@ -130,15 +139,18 @@
 								/>
 								<div class="plan-description">
 									<p class="plan-name">Pro</p>
-									<p class="plan-price">$15/mo</p>
-									<p class="plan-discount hidden">2 months free</p>
+										<p class="plan-price plan-price--month">$15/mo</p>
+										<p class="plan-price plan-price--year">$150/yr</p>
+										<p class="plan-discount">2 months free</p>
 								</div>
+									<input type="checkbox" id="pro" />
+								</label>
 							</div>
 						</div>
 						<div class="step-content-subscriptions">
-							<p class="subscription--monthly plan--current">Monthly</p>
-							<label class="plan-switch" for="plan">
-								<input id="plan" type="checkbox" />
+							<p class="subscription--monthly">Monthly</p>
+							<label class="plan-switch" for="plan-type-btn">
+								<input id="plan-type-btn" type="checkbox" />
 								<span></span>
 							</label>
 							<p class="subscription--yearly">Yearly</p>
@@ -153,7 +165,7 @@
 							</p>
 						</div>
 						<div class="step-content-body">
-							<div class="content-controls active">
+							<div class="content-controls">
 								<label for="online-service">
 									<input type="checkbox" name="add-on" id="online-service" />
 									<div class="add-on-description">
@@ -164,7 +176,7 @@
 								</label>
 							</div>
 
-							<div class="content-controls active">
+							<div class="content-controls">
 								<label for="larger-storage">
 									<input type="checkbox" name="add-on" id="larger-storage" />
 									<div class="add-on-description">
@@ -183,7 +195,7 @@
 										id="customizable-profile"
 									/>
 									<div class="add-on-description">
-										<p class="add-on-name">Customizable profile</p>
+										<p class="add-on-name">Customizable Profile</p>
 										<p class="add-on-text">Custom theme on your profile</p>
 									</div>
 									<p class="add-on-price">+$2/mo</p>
