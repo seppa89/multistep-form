@@ -76,6 +76,21 @@ section.hidden,
 	min-height: 100dvh;
 }
 
+.input-error {
+	display: none;
+	color: var(--strawberry-red);
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.content-controls.invalid input {
+	border: 1px solid var(--strawberry-red);
+}
+
+.content-controls.invalid .input-error {
+	display: block;
+}
+
 .step-content-body {
 	display: flex;
 	flex-direction: column;
@@ -95,6 +110,7 @@ section.hidden,
 	align-items: flex-start;
 	justify-content: center;
 	padding-top: 3.2rem;
+	margin-bottom: -9rem;
 }
 
 .steps {
@@ -138,17 +154,15 @@ form {
 }
 
 .form-content-box {
-	padding: 1.6rem;
+	padding: 1.6rem 1.6rem 2.4rem 1.6rem;
 	position: relative;
 	flex: 1;
 }
 
 .form-content {
-	position: relative;
-	top: -9rem;
 	background-color: var(--white);
 	border-radius: 1rem;
-	padding: 3rem 2.4rem;
+	padding: 3rem 2.4rem 3.2rem 2.4rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2.2rem;
@@ -189,9 +203,14 @@ form {
 	gap: 0.4rem;
 }
 
+.input-description {
+	display: flex;
+	justify-content: space-between;
+}
+
 .step--one label {
-	font-size: 1.25rem;
-	letter-spacing: -0.3px;
+	font-size: 1.3rem;
+	letter-spacing: -0.6px;
 	color: var(--primary-blue);
 }
 
@@ -201,6 +220,9 @@ form {
 	border: 1px solid var(--light-gray);
 	border-radius: 0.4rem;
 	font-family: inherit;
+	color: var(--primary-blue);
+	font-weight: 700;
+	letter-spacing: -0.3px;
 }
 
 .step--one input:focus-visible {
@@ -247,15 +269,14 @@ form {
 .plan-description {
 	display: flex;
 	flex-direction: column;
-	gap: 1.1rem;
-	justify-content: center;
+	gap: 0.8rem;
 }
 
 .plan-name {
 	color: var(--primary-blue);
 	font-weight: 700;
 	letter-spacing: -0.2px;
-	line-height: 1;
+	line-height: 1.3;
 }
 
 .plan-price {
@@ -265,7 +286,7 @@ form {
 }
 
 .plan-discount {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: var(--primary-blue);
 }
 
@@ -316,6 +337,9 @@ form {
 	display: block;
 	visibility: visible;
 	opacity: 1;
+	letter-spacing: -0.5px;
+	line-height: 1.1;
+	margin-top: 0.1rem;
 }
 
 .plan-switch {
@@ -468,7 +492,7 @@ form {
 	display: flex;
 	justify-content: space-between;
 	color: var(--cool-gray);
-	padding: 1.5rem 1.7rem 0 1.6rem;
+	padding: 1.5rem 1.6rem 0 1.6rem;
 }
 
 .summary-total p {
@@ -561,6 +585,10 @@ form {
 .btn--next {
 	background-color: var(--primary-blue);
 	color: var(--magnolia);
+}
+
+.btn--next:hover {
+	filter: brightness(1.4);
 }
 
 .btn--next[type='submit'] {
@@ -659,7 +687,7 @@ form {
 	}
 
 	.step-content-description {
-		letter-spacing: -0.89px;
+		letter-spacing: -0.9px;
 		line-height: 3.7rem;
 	}
 
@@ -687,11 +715,20 @@ form {
 	.step--one input {
 		padding: 1.4rem 1.5rem;
 		border-radius: 0.8rem;
+		cursor: pointer;
+	}
+
+	.input-error {
+		font-size: 1.4rem;
+	}
+
+	.step--one input:hover {
+		border-color: var(--purplish-blue);
 	}
 
 	.step--one input::placeholder {
 		font-weight: 500;
-		letter-spacing: 0.1px;
+		letter-spacing: -0.01px;
 	}
 
 	.form-buttons-box {
@@ -704,8 +741,12 @@ form {
 		padding: 1.5rem 2.4rem;
 		border-radius: 0.8rem;
 		font-size: 1.6rem;
-		letter-spacing: 0.1px;
 		line-height: 1.1;
+		cursor: pointer;
+	}
+
+	.btn--prev:hover {
+		color: var(--primary-blue);
 	}
 
 	.step--two .step-content-body {
@@ -720,7 +761,7 @@ form {
 
 	.plan-type {
 		flex-direction: column;
-		padding: 1.9rem 1.5rem 1.8rem 1.5rem;
+		padding: 1.9rem 1.5rem 1.6rem 1.5rem;
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 4.2rem;
@@ -742,14 +783,14 @@ form {
 		gap: 1rem;
 	}
 
-	.plan-discount {
+	.plan-description p.plan-discount {
 		font-size: 1.3rem;
 		letter-spacing: -0.6px;
 	}
 
 	.step-content-subscriptions {
 		margin: 0;
-		padding-right: 2.6rem;
+		padding-right: 2.7rem;
 	}
 
 	.step--three .step-content-body {
@@ -757,7 +798,7 @@ form {
 	}
 
 	.step--three label {
-		padding: 2rem 2.4rem;
+		padding: 2rem 2.3rem;
 		cursor: pointer;
 	}
 
@@ -773,7 +814,7 @@ form {
 	.step--three .add-on-name {
 		font-size: 1.6rem;
 		line-height: 1;
-		letter-spacing: 0.3px;
+		letter-spacing: -0.2px;
 	}
 
 	.step--three .add-on-text {

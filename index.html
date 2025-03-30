@@ -58,7 +58,10 @@
 						</div>
 						<div class="step-content-body">
 							<div class="content-controls">
+								<div class="input-description">
 								<label for="name">Name</label>
+									<p class="input-error">This field is required</p>
+								</div>
 								<input
 									type="text"
 									id="name"
@@ -68,7 +71,10 @@
 								/>
 							</div>
 							<div class="content-controls">
+								<div class="input-description">
 								<label for="email">Email Address</label>
+									<p class="input-error">This field is required</p>
+								</div>
 								<input
 									type="email"
 									id="email"
@@ -78,7 +84,10 @@
 								/>
 							</div>
 							<div class="content-controls">
+								<div class="input-description">
 								<label for="phone">Phone Number</label>
+									<p class="input-error">This field is required</p>
+								</div>
 								<input
 									type="text"
 									id="phone"
@@ -167,23 +176,33 @@
 						<div class="step-content-body">
 							<div class="content-controls">
 								<label for="online-service">
-									<input type="checkbox" name="add-on" id="online-service" />
+									<input
+										type="checkbox"
+										name="online-service"
+										id="online-service"
+									/>
 									<div class="add-on-description">
 										<p class="add-on-name">Online service</p>
 										<p class="add-on-text">Access to multiplayer games</p>
 									</div>
-									<p class="add-on-price">+$1/mo</p>
+									<p class="add-on-price price--month">+$1/mo</p>
+									<p class="add-on-price price--year hidden">+$10/yr</p>
 								</label>
 							</div>
 
 							<div class="content-controls">
 								<label for="larger-storage">
-									<input type="checkbox" name="add-on" id="larger-storage" />
+									<input
+										type="checkbox"
+										name="larger-storage"
+										id="larger-storage"
+									/>
 									<div class="add-on-description">
 										<p class="add-on-name">Larger storage</p>
 										<p class="add-on-text">Extra 1TB of cloud save</p>
 									</div>
-									<p class="add-on-price">+$2/mo</p>
+									<p class="add-on-price price--month">+$2/mo</p>
+									<p class="add-on-price price--year hidden">+$20/yr</p>
 								</label>
 							</div>
 
@@ -191,14 +210,15 @@
 								<label for="customizable-profile">
 									<input
 										type="checkbox"
-										name="add-on"
+										name="custom-profile"
 										id="customizable-profile"
 									/>
 									<div class="add-on-description">
 										<p class="add-on-name">Customizable Profile</p>
 										<p class="add-on-text">Custom theme on your profile</p>
 									</div>
-									<p class="add-on-price">+$2/mo</p>
+									<p class="add-on-price price--month">+$2/mo</p>
+									<p class="add-on-price price--year hidden">+$20/yr</p>
 								</label>
 							</div>
 						</div>
