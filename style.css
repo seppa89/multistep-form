@@ -782,6 +782,71 @@ form {
 	}
 
 	.add-on-price {
+		font-size: 1.5rem;
+		letter-spacing: -0.5px;
+	}
+
+	.plan-change-btn {
+		cursor: pointer;
+	}
+
+	.step--four .plan-change-btn:hover {
+		color: var(--purplish-blue);
+	}
+
+	.summary {
+		padding: 0 2.4rem 2.4rem 2.4rem;
+	}
+
+	.summary-plan.active {
+		padding: 2.5rem 0;
+		padding-top: 1.7rem;
+	}
+
+	.summary-plan.active .summary-name {
+		letter-spacing: -0.2px;
 		font-size: 1.6rem;
+	}
+
+	.summary-plan.active .summary-price {
+		margin-top: 0.6rem;
+		letter-spacing: 0.2px;
+		color: var(--primary-blue);
+	}
+	.summary-description {
+		gap: 0.3rem;
+	}
+
+	.summary-plan {
+		padding-top: 1.8rem;
+	}
+
+	.summary-price {
+		font-size: 1.6rem;
+		letter-spacing: -1.1px;
+		color: var(--cool-gray);
+	}
+
+	.summary-total {
+		align-items: center;
+		padding: 1.3rem 2.4rem 0 2.4rem;
+	}
+
+	.summary-total p:nth-child(2) {
+		font-size: 2rem;
+		margin-top: 0;
+	}
+
+	.step--five.form-content {
+		padding-top: 16.5rem;
+		gap: 2rem;
+	}
+
+	.step--five img {
+		width: 8rem;
+	}
+
+	.step--five .step-content-header {
+		gap: 3.6rem;
 	}
 }
