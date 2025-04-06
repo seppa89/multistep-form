@@ -12,6 +12,7 @@
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Frontend Mentor | Multi-step form</title>
+		<script defer src="script.js" type="module"></script>
 	</head>
 	<body>
 		<main class="container">
@@ -47,7 +48,7 @@
 					</li>
 				</ul>
 			</div>
-			<form>
+			<form novalidate>
 				<div class="form-content-box">
 					<section class="form-content step--one">
 						<div class="step-content-header">
@@ -57,42 +58,39 @@
 							</p>
 						</div>
 						<div class="step-content-body">
-							<div class="content-controls">
+							<div class="content-controls" id="name-control">
 								<div class="input-description">
-								<label for="name">Name</label>
+									<label for="name">Name</label>
 									<p class="input-error">This field is required</p>
 								</div>
 								<input
 									type="text"
 									id="name"
 									placeholder="e.g. Stephen King"
-									required
 									autocomplete="off"
 								/>
 							</div>
-							<div class="content-controls">
+							<div class="content-controls" id="email-control">
 								<div class="input-description">
-								<label for="email">Email Address</label>
+									<label for="email">Email Address</label>
 									<p class="input-error">This field is required</p>
 								</div>
 								<input
 									type="email"
 									id="email"
 									placeholder="e.g. stephenking@lorem.com"
-									required
 									autocomplete="off"
 								/>
 							</div>
-							<div class="content-controls">
+							<div class="content-controls" id="phone-control">
 								<div class="input-description">
-								<label for="phone">Phone Number</label>
+									<label for="phone">Phone Number</label>
 									<p class="input-error">This field is required</p>
 								</div>
 								<input
 									type="text"
 									id="phone"
 									placeholder="e.g. +1 234 567 890"
-									required
 									autocomplete="off"
 								/>
 							</div>
@@ -109,50 +107,50 @@
 						<div class="step-content-body">
 							<div class="content-controls">
 								<label for="arcade" id="plan--arcade" class="plan-type">
-								<img
-									src="assets/images/icon-arcade.svg"
-									alt="arcade-plan"
-									class="plan-icon"
-								/>
-								<div class="plan-description">
-									<p class="plan-name">Arcade</p>
+									<img
+										src="assets/images/icon-arcade.svg"
+										alt="arcade-plan"
+										class="plan-icon"
+									/>
+									<div class="plan-description">
+										<p class="plan-name">Arcade</p>
 										<p class="plan-price plan-price--month">$9/mo</p>
 										<p class="plan-price plan-price--year">$90/yr</p>
 										<p class="plan-discount">2 months free</p>
-								</div>
-									<input type="checkbox" id="arcade" />
+									</div>
+									<input type="radio" id="arcade" name="plan-type" />
 								</label>
 							</div>
 							<div class="content-controls">
 								<label for="advanced" id="plan--advanced" class="plan-type">
-								<img
-									src="assets/images/icon-advanced.svg"
-									alt="advanced-plan"
-									class="plan-icon"
-								/>
-								<div class="plan-description">
-									<p class="plan-name">Advanced</p>
+									<img
+										src="assets/images/icon-advanced.svg"
+										alt="advanced-plan"
+										class="plan-icon"
+									/>
+									<div class="plan-description">
+										<p class="plan-name">Advanced</p>
 										<p class="plan-price plan-price--month">$12/mo</p>
 										<p class="plan-price plan-price--year">$120/yr</p>
 										<p class="plan-discount">2 months free</p>
-								</div>
-									<input type="checkbox" id="advanced" />
+									</div>
+									<input type="radio" id="advanced" name="plan-type" />
 								</label>
 							</div>
 							<div class="content-controls">
 								<label for="pro" id="plan--pro" class="plan-type">
-								<img
-									src="assets/images/icon-pro.svg"
-									alt="pro-plan"
-									class="plan-icon"
-								/>
-								<div class="plan-description">
-									<p class="plan-name">Pro</p>
+									<img
+										src="assets/images/icon-pro.svg"
+										alt="pro-plan"
+										class="plan-icon"
+									/>
+									<div class="plan-description">
+										<p class="plan-name">Pro</p>
 										<p class="plan-price plan-price--month">$15/mo</p>
 										<p class="plan-price plan-price--year">$150/yr</p>
 										<p class="plan-discount">2 months free</p>
-								</div>
-									<input type="checkbox" id="pro" />
+									</div>
+									<input type="radio" id="pro" name="plan-type" />
 								</label>
 							</div>
 						</div>
@@ -235,24 +233,10 @@
 							<div class="summary">
 								<div class="summary-plan active">
 									<div class="summary-description">
-										<p class="summary-name">Arcade (Monthly)</p>
+										<p class="summary-name"></p>
 										<button class="plan-change-btn">Change</button>
 									</div>
-									<p class="summary-price">$9/mo</p>
-								</div>
-								<div class="summary-plan">
-									<div class="summary-description">
-										<p class="summary-name">Online service</p>
-										<button class="plan-change-btn">Change</button>
-									</div>
-									<p class="summary-price">+$1/mo</p>
-								</div>
-								<div class="summary-plan">
-									<div class="summary-description">
-										<p class="summary-name">Larger storage</p>
-										<button class="plan-change-btn">Change</button>
-									</div>
-									<p class="summary-price">+$2/mo</p>
+									<p class="summary-price"></p>
 								</div>
 							</div>
 							<div class="summary-total">
