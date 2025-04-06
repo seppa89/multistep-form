@@ -102,7 +102,7 @@ section.hidden,
 /*******************/
 
 .form-steps-box {
-	background: url('/assets/images/bg-sidebar-mobile.svg');
+	background: url('assets/images/bg-sidebar-mobile.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 17.2rem;
