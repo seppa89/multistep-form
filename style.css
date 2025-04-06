@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+	src: url('/multistep-form/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
 	font-weight: 400;
 }
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+	src: url('/multistep-form/assets/fonts/Ubuntu-Medium.ttf') format('truetype');
 	font-weight: 500;
 }
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+	src: url('/multistep-form/assets/fonts/Ubuntu-Bold.ttf') format('truetype');
 	font-weight: 700;
 }
 
@@ -102,7 +102,7 @@ section.hidden,
 /*******************/
 
 .form-steps-box {
-	background: url('/assets/images/bg-sidebar-mobile.svg');
+	background: url('/multistep-form/assets/images/bg-sidebar-mobile.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 17.2rem;
@@ -623,7 +623,7 @@ form {
 	}
 
 	.form-steps-box {
-		background: url('/assets/images/bg-sidebar-desktop.svg');
+		background: url('/multistep-form/assets/images/bg-sidebar-desktop.svg');
 		width: 27.4rem;
 		height: 56.8rem;
 		justify-content: flex-start;
