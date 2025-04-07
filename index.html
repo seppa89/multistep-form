@@ -12,7 +12,7 @@
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Frontend Mentor | Multi-step form</title>
-		<script defer src="script.js" type="module"></script>
+		<script defer src="script.js"></script>
 	</head>
 	<body>
 		<main class="container">
@@ -52,7 +52,7 @@
 				<div class="form-content-box">
 					<section class="form-content step--one">
 						<div class="step-content-header">
-							<h2 class="step-content-heading">Personal info</h2>
+							<h1 class="step-content-heading">Personal info</h1>
 							<p class="step-content-description">
 								Please provide your name, email address, and phone number.
 							</p>
@@ -99,7 +99,7 @@
 
 					<section class="form-content step--two hidden">
 						<div class="step-content-header">
-							<h2 class="step-content-heading">Select your plan</h2>
+							<h1 class="step-content-heading">Select your plan</h1>
 							<p class="step-content-description">
 								You have the option of monthly or yearly billing.
 							</p>
@@ -112,12 +112,12 @@
 										alt="arcade-plan"
 										class="plan-icon"
 									/>
-									<div class="plan-description">
-										<p class="plan-name">Arcade</p>
-										<p class="plan-price plan-price--month">$9/mo</p>
-										<p class="plan-price plan-price--year">$90/yr</p>
-										<p class="plan-discount">2 months free</p>
-									</div>
+									<span class="plan-description">
+										<span class="plan-name">Arcade</span>
+										<span class="plan-price plan-price--month">$9/mo</span>
+										<span class="plan-price plan-price--year">$90/yr</span>
+										<span class="plan-discount">2 months free</span>
+									</span>
 									<input type="radio" id="arcade" name="plan-type" />
 								</label>
 							</div>
@@ -128,12 +128,12 @@
 										alt="advanced-plan"
 										class="plan-icon"
 									/>
-									<div class="plan-description">
-										<p class="plan-name">Advanced</p>
-										<p class="plan-price plan-price--month">$12/mo</p>
-										<p class="plan-price plan-price--year">$120/yr</p>
-										<p class="plan-discount">2 months free</p>
-									</div>
+									<span class="plan-description">
+										<span class="plan-name">Advanced</span>
+										<span class="plan-price plan-price--month">$12/mo</span>
+										<span class="plan-price plan-price--year">$120/yr</span>
+										<span class="plan-discount">2 months free</span>
+									</span>
 									<input type="radio" id="advanced" name="plan-type" />
 								</label>
 							</div>
@@ -144,12 +144,12 @@
 										alt="pro-plan"
 										class="plan-icon"
 									/>
-									<div class="plan-description">
-										<p class="plan-name">Pro</p>
-										<p class="plan-price plan-price--month">$15/mo</p>
-										<p class="plan-price plan-price--year">$150/yr</p>
-										<p class="plan-discount">2 months free</p>
-									</div>
+									<span class="plan-description">
+										<span class="plan-name">Pro</span>
+										<span class="plan-price plan-price--month">$15/mo</span>
+										<span class="plan-price plan-price--year">$150/yr</span>
+										<span class="plan-discount">2 months free</span>
+									</span>
 									<input type="radio" id="pro" name="plan-type" />
 								</label>
 							</div>
@@ -166,7 +166,7 @@
 
 					<section class="form-content step--three hidden">
 						<div class="step-content-header">
-							<h2 class="step-content-heading">Pick add-ons</h2>
+							<h1 class="step-content-heading">Pick add-ons</h1>
 							<p class="step-content-description">
 								Add-ons help enhance your gaming experience.
 							</p>
@@ -179,12 +179,12 @@
 										name="online-service"
 										id="online-service"
 									/>
-									<div class="add-on-description">
-										<p class="add-on-name">Online service</p>
-										<p class="add-on-text">Access to multiplayer games</p>
-									</div>
-									<p class="add-on-price price--month">+$1/mo</p>
-									<p class="add-on-price price--year hidden">+$10/yr</p>
+									<span class="add-on-description">
+										<span class="add-on-name">Online service</span>
+										<span class="add-on-text">Access to multiplayer games</span>
+									</span>
+									<span class="add-on-price price--month">+$1/mo</span>
+									<span class="add-on-price price--year hidden">+$10/yr</span>
 								</label>
 							</div>
 
@@ -195,12 +195,12 @@
 										name="larger-storage"
 										id="larger-storage"
 									/>
-									<div class="add-on-description">
-										<p class="add-on-name">Larger storage</p>
-										<p class="add-on-text">Extra 1TB of cloud save</p>
-									</div>
-									<p class="add-on-price price--month">+$2/mo</p>
-									<p class="add-on-price price--year hidden">+$20/yr</p>
+									<span class="add-on-description">
+										<span class="add-on-name">Larger storage</span>
+										<span class="add-on-text">Extra 1TB of cloud save</span>
+									</span>
+									<span class="add-on-price price--month">+$2/mo</span>
+									<span class="add-on-price price--year hidden">+$20/yr</span>
 								</label>
 							</div>
 
@@ -211,12 +211,14 @@
 										name="custom-profile"
 										id="customizable-profile"
 									/>
-									<div class="add-on-description">
-										<p class="add-on-name">Customizable Profile</p>
-										<p class="add-on-text">Custom theme on your profile</p>
-									</div>
-									<p class="add-on-price price--month">+$2/mo</p>
-									<p class="add-on-price price--year hidden">+$20/yr</p>
+									<span class="add-on-description">
+										<span class="add-on-name">Customizable Profile</span>
+										<span class="add-on-text"
+											>Custom theme on your profile</span
+										>
+									</span>
+									<span class="add-on-price price--month">+$2/mo</span>
+									<span class="add-on-price price--year hidden">+$20/yr</span>
 								</label>
 							</div>
 						</div>
@@ -224,7 +226,7 @@
 
 					<section class="form-content step--four hidden">
 						<div class="step-content-header">
-							<h2 class="step-content-heading">Finishing up</h2>
+							<h1 class="step-content-heading">Finishing up</h1>
 							<p class="step-content-description">
 								Double-check everything looks OK before confirming.
 							</p>
@@ -249,7 +251,7 @@
 					<section class="form-content step--five hidden">
 						<div class="step-content-header">
 							<img src="assets/images/icon-thank-you.svg" alt="thank-you" />
-							<h2 class="step-content-heading">Thank you!</h2>
+							<h1 class="step-content-heading">Thank you!</h1>
 						</div>
 						<div class="step-content">
 							<p class="finish-text">
